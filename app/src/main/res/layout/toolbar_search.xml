@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="toolbarViewmodel"
+            type="com.nkr.githubusersearchkotlinmvvm.ui.SearchListViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:background="@color/colorTeal"
+        >
+
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_search_grey_24dp"
+                android:drawablePadding="@dimen/spaceNormal"
+                android:paddingLeft="@dimen/spaceNormal"
+                android:ellipsize="end"
+                android:hint="@string/hint_search"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:layout_margin="@dimen/spaceXSmall"
+                android:maxLength="255"
+                android:text="@={toolbarViewmodel.userQuery}"
+
+                />
+
+
+    </LinearLayout>
+
+
+</layout>
